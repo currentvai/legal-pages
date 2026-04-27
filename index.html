@@ -157,14 +157,56 @@
             to { opacity: 1; transform: translateX(0); }
         }
 
-        footer {
-            text-align: center;
-            margin-top: 60px;
-            font-size: 0.7rem;
-            color: #555;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
+.footer-pro {
+    text-align: center;
+    margin-top: 80px;
+    padding: 60px 10px;
+    background: radial-gradient(circle at center, #061111 0%, #020202 100%);
+    position: relative;
+}
+
+/* Main text */
+.footer-pro .main-text {
+    font-size: 1rem;
+    color: #cfcfcf;
+    letter-spacing: 2px;
+}
+
+.footer-pro .main-text span {
+    color: #00ffe1;
+}
+
+/* Glow line */
+.footer-pro .line {
+    width: 120px;
+    height: 2px;
+    margin: 15px auto;
+    background: linear-gradient(to right, transparent, #00ffe1, transparent);
+    position: relative;
+}
+
+/* Center glowing dot */
+.footer-pro .line::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    background: #00ffe1;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 8px #00ffe1, 0 0 15px #00ffe1;
+}
+
+/* Bottom text */
+.footer-pro .sub-text {
+    font-size: 0.6rem;
+    color: rgba(255, 255, 255, 0.25);
+    letter-spacing: 3px;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
 
         @media (max-width: 600px) {
             h1 { font-size: 1.5rem; }
@@ -267,9 +309,16 @@
             </div>
         </section>
 
-<footer>
-  <p>© 2026 Current Vai.</p>
-  <p>No part of this site may be reproduced without permission.</p>
+<footer class="footer-pro">
+  <div class="main-text">
+    Copyright © 2026 <span>Current Vai</span>.
+  </div>
+
+  <div class="line"></div>
+
+  <div class="sub-text">
+    NO PART OF THIS SITE MAY BE REPRODUCED WITHOUT PERMISSION.
+  </div>
 </footer>
     </div>
 
